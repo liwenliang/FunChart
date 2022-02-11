@@ -296,6 +296,13 @@ export default {
     opacity: 0.6;
     transition: opacity, background 0.3s ease;
 
+    .name {
+      height: 20px;
+      color: #777;
+      font-size: 13px;
+      line-height: 20px;
+    }
+
     &:hover {
       background: rgba(64, 160, 255, 0.1);
       border: 1px solid #409eff;
@@ -318,23 +325,7 @@ export default {
         height: 54px;
       }
     }
-
-    .name {
-      height: 20px;
-      color: #777;
-      font-size: 13px;
-      line-height: 20px;
-    }
   }
-}
-
-.flip-list-move {
-  transition: transform 0.5s;
-}
-
-.ghost {
-  background: #c8ebfb;
-  opacity: 0.3;
 }
 
 .layer-list {
@@ -355,25 +346,6 @@ export default {
     border-bottom: 1px solid rgba(0, 0, 0, 0.03);
     transition: background 0.3s ease;
 
-    &.active {
-      background: rgba(64, 160, 255, 0.06);
-      border-right: 6px solid #409eff7d;
-    }
-
-    &:hover {
-      background: rgba(64, 160, 255, 0.06);
-      opacity: 1;
-
-      .icon {
-        opacity: 1;
-      }
-    }
-
-    .name {
-      flex: 1;
-      color: #777;
-    }
-
     .icon {
       float: right;
       color: #999;
@@ -386,6 +358,34 @@ export default {
         cursor: pointer;
       }
     }
+
+    &.active {
+      background: rgba(64, 160, 255, 0.06);
+      border-right: 6px solid #409eff7d;
+    }
+
+    .name {
+      flex: 1;
+      color: #777;
+    }
+
+    &:hover {
+      background: rgba(64, 160, 255, 0.06);
+      opacity: 1;
+
+      .icon {
+        opacity: 1;
+      }
+    }
   }
+}
+
+.flip-list-move {
+  transition: transform 0.5s;
+}
+
+.ghost {
+  background: #c8ebfb;
+  opacity: 0.3;
 }
 </style>

@@ -163,26 +163,26 @@ export default {
 
 .topbar-view {
   position: absolute;
-  height: 60px;
-  width: 100vw;
   z-index: 1000;
+  width: 100vw;
+  height: 60px;
 }
 
 .toolbar-view {
   position: absolute;
   top: 60px;
-  width: 50px;
   bottom: 0;
   z-index: 1000;
+  width: 50px;
 }
 
 .config-view {
   position: absolute;
-  right: 0;
   top: 60px;
-  width: 300px;
+  right: 0;
   bottom: 0;
   z-index: 1000;
+  width: 300px;
 }
 
 .scale-view {
@@ -190,15 +190,16 @@ export default {
   right: 316px;
   bottom: 16px;
   z-index: 1000;
+
   &.preview {
     right: 40px;
   }
 }
 
 .main-view {
-  background: #eeeeee;
+  height: calc(100vh - 60px);
   padding: 60px 300px 0 50px;
   overflow: hidden;
-  height: calc(100vh - 60px);
+  background: #eee;
 }
 </style>

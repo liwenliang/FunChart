@@ -36,35 +36,35 @@ export default {
 
 <style lang="scss" scoped>
 .panel {
-  width: 130px;
-  border-radius: 8px;
   display: flex;
   align-items: center;
+  width: 130px;
   background: #ffffffe9;
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
+  border-radius: 8px;
 }
 
 .control-bar {
-  width: 100%;
   display: flex;
   align-items: center;
-  text-align: center;
+  width: 100%;
   height: 32px;
-  color: #666666;
   padding: 0 6px;
+  color: #666;
+  text-align: center;
 
   .btn {
     width: 24px;
     height: 24px;
+    font-size: 12px;
     line-height: 24px;
     border-radius: 14px;
-    font-size: 12px;
     transition: all 0.3s ease;
 
     &:hover {
+      color: #333;
+      background-color: #ddd;
       cursor: pointer;
-      background-color: #dddddd;
-      color: #333333;
     }
   }
 
@@ -76,10 +76,10 @@ export default {
 
 .canvas-view {
   position: relative;
-  background: #1e1e1ee9;
   width: 144px;
-  margin: 6px 8px;
   height: 120px;
+  margin: 6px 8px;
+  background: #1e1e1ee9;
 }
 
 .canvas-box {
