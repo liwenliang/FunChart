@@ -12,7 +12,7 @@
           <div
             v-for="(item, index) in chartData.elements"
             :key="item.name"
-            class="list-item"
+            class="layer-list-item"
             :class="{ active: index === $parent.$parent.currentElementIndex }"
             @click="$parent.$parent.setActiveComponentByIndex(index)"
           >
@@ -279,6 +279,58 @@ export default {
   color: #999;
 }
 
+.layer-list {
+  flex: 1;
+  padding: 0;
+  overflow: scroll;
+
+  .layer-list-item {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    height: 48px;
+    margin-bottom: -1px;
+    padding: 0 16px;
+    border-top: 1px solid rgba(0, 0, 0, 0.03);
+    border-right: 6px solid transparent;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+    transition: background 0.3s ease;
+
+    .icon {
+      float: right;
+      color: #999;
+      font-size: 14px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+
+      &:hover {
+        color: #409eff;
+        cursor: pointer;
+      }
+    }
+
+    &.active {
+      background: rgba(64, 160, 255, 0.06);
+      border-right: 6px solid #409eff7d;
+    }
+
+    .name {
+      flex: 1;
+      color: #777;
+    }
+
+    &:hover {
+      background: rgba(64, 160, 255, 0.06);
+      opacity: 1;
+
+      .icon {
+        opacity: 1;
+      }
+    }
+  }
+}
+
 .component-list {
   flex: 1;
   padding: 0 10px 0 16px;
@@ -323,58 +375,6 @@ export default {
 
       img {
         height: 54px;
-      }
-    }
-  }
-}
-
-.layer-list {
-  flex: 1;
-  padding: 0;
-  overflow: scroll;
-
-  .list-item {
-    display: flex;
-    align-items: center;
-    box-sizing: border-box;
-    width: 100%;
-    height: 48px;
-    margin-bottom: -1px;
-    padding: 0 16px;
-    border-top: 1px solid rgba(0, 0, 0, 0.03);
-    border-right: 6px solid transparent;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.03);
-    transition: background 0.3s ease;
-
-    .icon {
-      float: right;
-      color: #999;
-      font-size: 14px;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-
-      &:hover {
-        color: #409eff;
-        cursor: pointer;
-      }
-    }
-
-    &.active {
-      background: rgba(64, 160, 255, 0.06);
-      border-right: 6px solid #409eff7d;
-    }
-
-    .name {
-      flex: 1;
-      color: #777;
-    }
-
-    &:hover {
-      background: rgba(64, 160, 255, 0.06);
-      opacity: 1;
-
-      .icon {
-        opacity: 1;
       }
     }
   }
